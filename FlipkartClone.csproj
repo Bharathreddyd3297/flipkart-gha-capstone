@@ -4,6 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- IMPORTANT FOR AZURE WINDOWS APP SERVICE -->
+    <PublishIISAssets>true</PublishIISAssets>
   </PropertyGroup>
 
 </Project>
