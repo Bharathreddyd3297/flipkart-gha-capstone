@@ -20,11 +20,11 @@ resource "azurerm_service_plan" "plan" {
   name                = var.app_service_plan_name
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  os_type             = "Linux"
-  sku_name            = "B1"
+  os_type  = "Windows"
+  sku_name = "B1"
 }
 
-resource "azurerm_linux_web_app" "webapp" {
+resource "azurerm_windows_web_app" "webapp" {
   name                = var.web_app_name
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
@@ -32,7 +32,8 @@ resource "azurerm_linux_web_app" "webapp" {
 
   site_config {
     application_stack {
-      dotnet_version = "8.0"
+      current_stack  = "dotnetcore"
+      dotnet_version = "v8.0"
     }
   }
 }
