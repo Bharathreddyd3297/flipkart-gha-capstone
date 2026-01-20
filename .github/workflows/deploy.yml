@@ -40,10 +40,13 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
             dotnet-version: '8.0.x'
+            
+      - name: Show repo structure
+        run: ls -la
 
-    # Publish application
+      # Publish application
       - name: Publish .NET App
-        run: dotnet publish FlipkartClone/FlipkartClone.csproj -c Release -o publish
+        run: dotnet publish FlipkartClone.csproj -c Release -o publish
 
 
       # 8. Deploy to Azure Web App
