@@ -10,3 +10,9 @@ obj/
 # OS files
 .DS_Store
 Thumbs.db
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.crash.log
+terraform.tfvars
